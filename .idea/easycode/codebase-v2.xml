@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="com.obiscr.chatgpt.settings.EasyCodeState">
+    <option name="projectFiles" value="$PROJECT_DIR$/src/main/kotlin/io/steaming/example/command/Command.kt;E:/Coding/Kt/paper-sample/src/main/kotlin/io/steaming/example/event/Event.kt;E:/Coding/Kt/paper-sample/src/main/kotlin/io/steaming/example/main.kt;E:/Coding/Kt/paper-sample/build.gradle.kts;E:/Coding/Kt/paper-sample/run.py;E:/Coding/Kt/paper-sample/settings.gradle.kts" />
+  </component>
+</project>

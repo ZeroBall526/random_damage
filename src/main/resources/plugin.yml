@@ -1,0 +1,9 @@
+name: ${rootProject.name}
+version: '${version}'
+main: ${main_class}
+author: '${author}'
+api-version: '${api_version}'
+commands:
+  ga:
+    description: "give gold apple"
+    operator : admin
