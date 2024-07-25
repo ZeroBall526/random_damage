@@ -1,18 +1,27 @@
 package io.steaming.example.event
 
+import net.kyori.adventure.audience.Audience
+import net.kyori.adventure.text.Component
+import net.kyori.adventure.text.format.TextColor
 import org.bukkit.entity.Player
 import org.bukkit.event.EventHandler
 import org.bukkit.event.Listener
-import org.bukkit.event.player.PlayerJoinEvent
+import org.bukkit.event.entity.EntityDamageEvent
 
 class Event : Listener {
     //event page
-
     @EventHandler
-    fun join(e : PlayerJoinEvent){
-        val p : Player = e.player
+    fun dmg(event : EntityDamageEvent) {
+        if (event.entity is Player){
+            val p : Player = event.entity as Player
+            val range = (event.damage.toInt()..20).random().toDouble()
 
-        e.joinMessage = "${p.name}님이 접속하셨습니다."
-        p.sendMessage("${p.name}님 환영합니다!")
+            event.damage = range
+
+            val aud : Audience = p
+            aud.sendActionBar(Component.text("[받은 데미지 :")
+                .append(Component.text(range, TextColor.color(0xFF0000)))
+                .append(Component.text("]")))
+        }
     }
 }

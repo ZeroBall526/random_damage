@@ -47,7 +47,7 @@ tasks {
 
         doLast{
             val folder = file(rootProject.projectDir.resolve(project.property("server_dir")as String)).exists()
-            println("server folder exists : ${folder}")
+            println("server folder exists : $folder")
 
             if (folder){
                 println("Executing update ${rootProject.name} plugin")
